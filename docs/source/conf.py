@@ -10,9 +10,19 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+PACKAGE: str='shmakovpn'
+SCRIPT_DIR: str = os.path.dirname(os.path.abspath(__file__))
+DOCS_DIR: str = os.path.dirname(SCRIPT_DIR)
+PROJECT_DIR: str = os.path.dirname(DOCS_DIR)
+PACKAGE_DIR: str = os.path.join(PROJECT_DIR, project)
+sys.path.insert(0, PACKAGE_DIR)
+VERSION: str = ''
+with open(os.path.join(PACKAGE_DIR, 'version.py')) as version_file:
+    exec(version_file.read())
+
+
 
 
 # -- Project information -----------------------------------------------------
@@ -22,10 +32,10 @@ copyright = '2020, shmakovpn'
 author = 'shmakovpn'
 
 # The short X.Y version
-version = "'1.1'"
+version = '1.1'
 
 # The full version, including alpha/beta/rc tags
-release = "'1.1'"
+release = '1.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -61,7 +71,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

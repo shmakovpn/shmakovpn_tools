@@ -5,3 +5,4 @@ ipython
 sphinx
 sphinx-rtd-theme
 whatprovides
+twine

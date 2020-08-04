@@ -6,10 +6,13 @@
 Welcome to shmakovpn_tools's documentation!
 ===========================================
 
+.. include:: introduction.rst
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   code
 
 
 Indices and tables

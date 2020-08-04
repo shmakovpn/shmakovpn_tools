@@ -37,3 +37,7 @@ _templates/
 
 # pytest cache
 .pytest_cache/
+
+# build
+build/
+dist/

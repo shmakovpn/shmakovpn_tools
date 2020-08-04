@@ -1,7 +1,12 @@
-# shmakovpn_tools
+#!/bin/bash
+# This script creates a new python project (project template)
+#
+# Author: shmakovpn <shmakovpn@yandex.ru>
+#
+# Notes:
+# ! This script does not init a new git repository
+# 2020-08-04
 
-## History
-```shell
 PACKAGE_NAME=shmakovpn
 PROJECT_NAME=${PACKAGE_NAME}_tools
 PROJECT_DIR=~/${PROJECT_NAME}
@@ -53,6 +58,8 @@ echo '' >> .gitignore
 echo '# build' >> .gitignore
 echo 'build/' >> .gitignore
 echo 'dist/' >> .gitignore
+
+
 
 # conguring requirements.txt
 touch requirements.txt
@@ -320,5 +327,3 @@ echo "    run_upload()" >> upload_pypi.py
 # creating tests.py
 touch $PACKAGE_NAME/tests.py
 echo "import unittest" >> $PACKAGE_NAME/tests.py
-```
-
