@@ -32,8 +32,8 @@ def run_upload():
         pip_cert_arg: str = ''
     print(pip_cert_arg)
     dist_dir: str = os.path.join(SCRIPT_DIR, 'dist')
-    dist_file: str = os.path.join(dist_dir, 'shmakovpn-%s.tar.gz' % (VERSION, ))
-    dist_whls: str = os.path.join(dist_dir, 'shmakovpn-%s-*.whl' % (VERSION, ))
+    dist_file: str = os.path.join(dist_dir, 'shmakovpn_tools-%s.tar.gz' % (VERSION, ))
+    dist_whls: str = os.path.join(dist_dir, 'shmakovpn_tools-%s-*.whl' % (VERSION, ))
     os.system('twine upload "%s" "%s" %s --verbose' % (dist_file, dist_whls, pip_cert_arg))
     print('__end__')
 

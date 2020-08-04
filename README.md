@@ -109,6 +109,7 @@ echo "VERSION: str = '1.1'" >> $PACKAGE_NAME/version.py
 # creating examle module
 touch $PACKAGE_NAME/example.py
 echo "def hello_world():" >> $PACKAGE_NAME/example.py
+echo "    \"\"\"Prints **Hello World** to stdout\"\"\"" >> $PACKAGE_NAME/example.py
 echo "    print('Hello World')" >> $PACKAGE_NAME/example.py
 
 # reading version
@@ -217,7 +218,7 @@ echo "with open('README.md') as f:" >> setup.py
 echo "    long_description: str = f.read()" >> setup.py
 echo "" >> setup.py
 echo "setup(" >> setup.py
-echo "    name='$PACKAGE_NAME'," >> setup.py
+echo "    name='$PROJECT_NAME'," >> setup.py
 echo "    version=VERSION," >> setup.py
 echo "    packages=find_packages()," >> setup.py
 echo "    author='shmakovpn'," >> setup.py
@@ -225,7 +226,7 @@ echo "    author_email='shmakovpn@yandex.ru'," >> setup.py
 echo "    url='https://github.com/shmakovpn/$PROJECT_NAME'," >> setup.py
 echo "    download_url='https://github.com/shmakovpn/$PROJECT_NAME/archive/%s.zip' % (VERSION, )," >> setup.py
 echo "    long_description=long_description," >> setup.py
-echo "    long_description_content_type='text/x-rst'," >> setup.py
+echo "    long_description_content_type='text/markdown'," >> setup.py
 echo "    entry_points={" >> setup.py
 #echo "        'console_scripts': ['$PACKAGE_NAME=$PACKAGE_NAME:main']," >> setup.py
 echo "    }," >> setup.py
@@ -313,8 +314,8 @@ echo "    else:" >> upload_pypi.py
 echo "        pip_cert_arg: str = ''" >> upload_pypi.py
 echo "    print(pip_cert_arg)" >> upload_pypi.py
 echo "    dist_dir: str = os.path.join(SCRIPT_DIR, 'dist')" >> upload_pypi.py
-echo "    dist_file: str = os.path.join(dist_dir, '${PACKAGE_NAME}-%s.tar.gz' % (VERSION, ))" >> upload_pypi.py
-echo "    dist_whls: str = os.path.join(dist_dir, '${PACKAGE_NAME}-%s-*.whl' % (VERSION, ))" >> upload_pypi.py  #* comment for vim highlight
+echo "    dist_file: str = os.path.join(dist_dir, '${PROJECT_NAME}-%s.tar.gz' % (VERSION, ))" >> upload_pypi.py
+echo "    dist_whls: str = os.path.join(dist_dir, '${PROJECT_NAME}-%s-*.whl' % (VERSION, ))" >> upload_pypi.py  #* comment for vim highlight
 echo "    os.system('twine upload \"%s\" \"%s\" %s --verbose' % (dist_file, dist_whls, pip_cert_arg))" >> upload_pypi.py
 echo "    print('__end__')" >> upload_pypi.py
 echo "" >> upload_pypi.py

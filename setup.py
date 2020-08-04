@@ -9,7 +9,7 @@ with open('README.md') as f:
     long_description: str = f.read()
 
 setup(
-    name='shmakovpn',
+    name='shmakovpn_tools',
     version=VERSION,
     packages=find_packages(),
     author='shmakovpn',
@@ -17,7 +17,7 @@ setup(
     url='https://github.com/shmakovpn/shmakovpn_tools',
     download_url='https://github.com/shmakovpn/shmakovpn_tools/archive/%s.zip' % (VERSION, ),
     long_description=long_description,
-    long_description_content_type='text/x-rst',
+    long_description_content_type='text/markdown',
     entry_points={
     },
     install_requires=[
