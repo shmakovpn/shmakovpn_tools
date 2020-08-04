@@ -106,6 +106,11 @@ touch $PACKAGE_NAME/__init__.py  # we will stay this file empty
 touch $PACKAGE_NAME/version.py
 echo "VERSION: str = '1.1'" >> $PACKAGE_NAME/version.py
 
+# creating examle module
+touch $PACKAGE_NAME/example.py
+echo "def hello_world():" >> $PACKAGE_NAME/example.py
+echo "    print('Hello World')" >> $PACKAGE_NAME/example.py
+
 # reading version
 VERSION=$(cat $PACKAGE_NAME/version.py | grep 'VERSION' | sed -re "s/^[^=]*=\s* '([^ #]*)'.*$/\1/")
 
@@ -121,7 +126,7 @@ sed -i $DOCS_DIR/source/conf.py -re "s/^# sys\.path\.insert\(0, os\.path\.abspat
 sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL1/SCRIPT_DIR: str = os.path.dirname(os.path.abspath(__file__))\nTEMP_LABEL2/"
 sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL2/DOCS_DIR: str = os.path.dirname(SCRIPT_DIR)\nTEMP_LABEL3/"
 sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL3/PROJECT_DIR: str = os.path.dirname(DOCS_DIR)\nTEMP_LABEL4/"
-sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL4/PACKAGE_DIR: str = os.path.join(PROJECT_DIR, project)\nTEMP_LABEL5/"
+sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL4/PACKAGE_DIR: str = os.path.join(PROJECT_DIR, PACKAGE)\nTEMP_LABEL5/"
 sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL5/sys.path.insert(0, PACKAGE_DIR)\nTEMP_LABEL6/"
 ## configuring version
 sed -i $DOCS_DIR/source/conf.py -re "s/^TEMP_LABEL6/VERSION: str = ''\nTEMP_LABEL7/"
@@ -148,7 +153,7 @@ touch $DOCS_DIR/requirements.txt
 touch $DOCS_DIR/source/code.rst
 echo 'Code' >> $DOCS_DIR/source/code.rst
 echo "====\n" >> $DOCS_DIR/source/code.rst
-echo ".. automodule:: $PACKAGE_NAME" >> $DOCS_DIR/source/code.rst
+echo ".. automodule:: example" >> $DOCS_DIR/source/code.rst
 echo ' :members:' >> $DOCS_DIR/source/code.rst
 
 ## adding code.rst to index.rst

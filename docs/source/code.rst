@@ -1,5 +1,5 @@
 Code
 ====
 
-.. automodule:: shmakovpn
+.. automodule:: example
  :members:
