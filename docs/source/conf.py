@@ -18,7 +18,6 @@ DOCS_DIR: str = os.path.dirname(SCRIPT_DIR)
 PROJECT_DIR: str = os.path.dirname(DOCS_DIR)
 PACKAGE_DIR: str = os.path.join(PROJECT_DIR, PACKAGE)
 sys.path.insert(0, PACKAGE_DIR)
-print(sys.path)
 VERSION: str = ''
 with open(os.path.join(PACKAGE_DIR, 'version.py')) as version_file:
     exec(version_file.read())

@@ -13,6 +13,7 @@ Welcome to shmakovpn_tools's documentation!
    :caption: Contents:
 
    code
+   start_python_project
 
 
 Indices and tables
