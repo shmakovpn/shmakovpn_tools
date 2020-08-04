@@ -68,6 +68,9 @@ echo 'sphinx-rtd-theme' >> requirements.txt
 echo 'whatprovides' >> requirements.txt
 ## twine (need for uploading package to PyPI)
 echo 'twine' >> requirements.txt
+## coverage
+echo 'codecov' >> requirements.txt
+echo 'pytest-cov' >> requirements.txt
 
 # installing packages
 pip install --upgrade pip
@@ -326,5 +329,10 @@ echo "    run_upload()" >> upload_pypi.py
 # creating tests.py
 touch $PACKAGE_NAME/tests.py
 echo "import unittest" >> $PACKAGE_NAME/tests.py
+echo '' >> $PACKAGE_NAME/tests.py
+echo '' >> $PACKAGE_NAME/tests.py
+echo "class TestExample(unittest.TestCase):" >> $PACKAGE_NAME/tests.py
+echo "    def test_example(self):" >> $PACKAGE_NAME/tests.py
+echo "        self.assertTrue(True)" >> $PACKAGE_NAME/tests.py
 ```
 

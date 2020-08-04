@@ -6,3 +6,5 @@ sphinx
 sphinx-rtd-theme
 whatprovides
 twine
+codecov
+pytest-cov
