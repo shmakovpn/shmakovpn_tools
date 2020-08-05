@@ -68,6 +68,8 @@ echo 'pyflakes' >> requirements.txt
 echo 'pep8' >> requirements.txt
 echo 'pylint' >> requirements.txt
 echo 'ipython' >> requirements.txt
+## dataprovider for unittest
+echo 'unittest-dataprovider' >> requirements.txt
 ## sphinx
 echo 'sphinx' >> requirements.txt
 echo 'sphinx-rtd-theme' >> requirements.txt
