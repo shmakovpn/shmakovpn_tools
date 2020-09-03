@@ -14,6 +14,7 @@ Welcome to shmakovpn_tools's documentation!
 
    code
    start_python_project
+   centos_ad_integration
 
 
 Indices and tables
