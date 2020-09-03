@@ -26,7 +26,7 @@ Install **realmd**. (**oddjob**, **oddjob-mkhomedir** will be installed automati
 
 Install **bind-utils** (this package provides **nslookup** utility).
 
- .. code-blockk:: shell-session
+ .. code-block:: shell-session
 
   # yum install -y bind-utils
 
