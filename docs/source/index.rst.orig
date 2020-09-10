@@ -16,8 +16,11 @@ Welcome to shmakovpn_tools's documentation!
    start_python_project
    centos_ad_integration
    centos7_apache_sso
+<<<<<<< HEAD
    certbot
+=======
    datadriven/datadriven_contents
+>>>>>>> 33218ad0f41cd445386c812dcd64a30085947e2c
 
 
 Indices and tables
