@@ -4,6 +4,7 @@ pylint
 ipython
 unittest-dataprovider
 sphinx
+sphinx-tabs
 sphinx-rtd-theme
 whatprovides
 twine

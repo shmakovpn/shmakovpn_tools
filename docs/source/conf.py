@@ -32,10 +32,10 @@ copyright = '2020, shmakovpn'
 author = 'shmakovpn'
 
 # The short X.Y version
-version = '1.1'
+version = VERSION
 
 # The full version, including alpha/beta/rc tags
-release = '1.1'
+release = VERSION
 
 
 # -- General configuration ---------------------------------------------------
@@ -48,6 +48,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -90,3 +91,5 @@ intersphinx_mapping = {'https://docs.python.org/3/': None}
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+master_doc = 'contents'
