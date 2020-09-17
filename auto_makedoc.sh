@@ -4,12 +4,22 @@
 # Author: shmaovpn <shmakovpn@yandex.ru>
 # Date: 2020-09-06
 
+# Requirements:
+# Ubuntu: inotify-tools
+# Centos 8: inotify-tools (from epel repository)
+
 SCRIPT_DIR="$(dirname $0)"
 DOCS_SOURCE_DIR="${SCRIPT_DIR}/docs/source"
 
 # Checking that a VIRTUALENV is activated, exit otherwise
 if ! test ${VIRTUAL_ENV} ; then
     echo "A vitrualenv is not activated. \$VIRTUAL_ENV is null"
+    exit 1
+fi
+
+# Checking that *inotifywait* is installed
+if ! which inotifywait > /dev/null 2>&1 ; then
+    echo "*inotifywait* is not installed. Install package *inotify-tools*."
     exit 1
 fi
 

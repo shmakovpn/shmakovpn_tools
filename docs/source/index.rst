@@ -18,6 +18,8 @@ Welcome to shmakovpn_tools's documentation!
    centos7_apache_sso
    certbot
    datadriven/datadriven_contents
+   nodejs/nodejs_contents
+   sphinx/sphinx_contents
 
 
 Indices and tables

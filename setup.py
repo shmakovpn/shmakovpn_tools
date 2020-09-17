@@ -8,14 +8,16 @@ os.chdir(SCRIPT_DIR)
 with open('README.md') as f:
     long_description: str = f.read()
 
+GITHUB_URL: str = 'https://github.com/shmakovpn/shmakovpn_tools'
+
 setup(
     name='shmakovpn_tools',
     version=VERSION,
     packages=find_packages(),
     author='shmakovpn',
     author_email='shmakovpn@yandex.ru',
-    url='https://github.com/shmakovpn/shmakovpn_tools',
-    download_url='https://github.com/shmakovpn/shmakovpn_tools/archive/%s.zip' % (VERSION, ),
+    url=GITHUB_URL,
+    download_url='%s/archive/%s.zip' % (GITHUB_URL, VERSION, ),
     long_description=long_description,
     long_description_content_type='text/markdown',
     entry_points={
