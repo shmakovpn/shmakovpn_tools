@@ -20,6 +20,7 @@ Welcome to shmakovpn_tools's documentation!
    datadriven/datadriven_contents
    nodejs/nodejs_contents
    sphinx/sphinx_contents
+   django/django_contents
 
 
 Indices and tables
