@@ -10,3 +10,6 @@ whatprovides
 twine
 codecov
 pytest-cov
+
+setuptools
+Django

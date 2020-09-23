@@ -51,6 +51,8 @@ Create **auto_makedoc.sh** in your project folder.
 Run **auto_makedoc.sh** in another terminal.
 Create or modify any of documentation source file.
 
+.. _remote_sphinx:
+
 View your documentation on another host.
 ----------------------------------------
 
@@ -61,6 +63,8 @@ There are several kinds of possible solutions.
 One of which is share *docs/build/html* directory using HTTP.
 
 Let's use docker for this.
+
+.. _install_docker:
 
 Install **docker**.
 

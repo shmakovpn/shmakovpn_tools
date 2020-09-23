@@ -21,6 +21,7 @@ Welcome to shmakovpn_tools's documentation!
    nodejs/nodejs_contents
    sphinx/sphinx_contents
    django/django_contents
+   remote_ide/remote_ide_contents
 
 
 Indices and tables

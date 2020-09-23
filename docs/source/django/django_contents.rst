@@ -164,15 +164,28 @@ Install **unittest_dataprovider**
 We will test logger in two cases: DEBUG_MODE=True and DEBUG_MODE=False.
 Each case should be performed for all standard levels of logging: debug,
 info, warning, error, and critical.
-To realize this, we can write 6 test functions,
+To realize this, we can write 5 test functions,
 but this approach violates the DRY (don't repeat yourself) principle.
 The **dataprovider** decorator can make code clear and simple.
 
-Also, the **dataprovider** needs a data.
+Also, the **dataprovider** needs data.
 The easiest way to generate the data is **itertools.product**.
 
+We will use **override_settings** context manager
+to change the project configuration inside the test.
 
-todo
+It is not enough to **override_settings**.
+Because logging is configured before **override_settings** take effect.
+Thus, it is need to call **configure_logging** to change logging settings in fact.
+
+.. warning:: Don't forget to return the original logging settings back.
+
+To catch writings in stderr we have to patch **sys.stderr** using **MagicMock**.
+But to stay writing to stderr itself, the patched object has to be wrapped as **sys.stderr**.
 
 .. literalinclude:: ../../../shmakovpn/django_examples/logging_example/tests/logger_itself/test_logger_itself.py
  :language: python
+
+.. figure:: /_static/django_examples/logging_example/test_result.png
+ :alt: Django logging test result
+
