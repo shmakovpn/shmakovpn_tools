@@ -186,6 +186,6 @@ But to stay writing to stderr itself, the patched object has to be wrapped as **
 .. literalinclude:: ../../../shmakovpn/django_examples/logging_example/tests/logger_itself/test_logger_itself.py
  :language: python
 
-.. figure:: /_static/django_examples/logging_example/test_result.png
+.. figure:: ../images/django_examples/logging_example/test_result.png
  :alt: Django logging test result
 
