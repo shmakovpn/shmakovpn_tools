@@ -1,7 +1,7 @@
 Working with the project hosted on a remote server
 ==================================================
 
-.. figure:: /_static/remote_ide/developer_infrastructure.svg
+.. figure:: ../images/remote_ide/developer_infrastructure.svg
  :alt: A developer infrastructure
 
 .. warning:: Someone gives the advice to use **SFTP Drive**. It is a very slow program.
@@ -15,7 +15,7 @@ Please, read this:
 
 Now we are going to use **Samba** under **Docker**.
 
-.. figure:: /_static/remote_ide/ide_to_server.svg
+.. figure:: ../images/remote_ide/ide_to_server.svg
  :alt: An IDE interaction with a server 
 
 I suppose that you are already installed **Docker**.
@@ -50,16 +50,16 @@ Run the docker container.
  
 Mount **samba** share to a PC with an IDE.
 
-.. figure:: /_static/remote_ide/mount_network_drive1.png
+.. figure:: ../images/remote_ide/mount_network_drive1.png
  :alt: Mount the network drive. Step 1.
 
-.. figure:: /_static/remote_ide/mount_network_drive2.png
+.. figure:: ../images/remote_ide/mount_network_drive2.png
  :alt: Mount the network drive. Step 2.
 
-.. figure:: /_static/remote_ide/mount_network_drive3.png
+.. figure:: ../images/remote_ide/mount_network_drive3.png
  :alt: Mount the network drive. Step 3.
 
-.. figure:: /_static/remote_ide/mount_network_drive4.png
+.. figure:: ../images/remote_ide/mount_network_drive4.png
  :alt: Mount the network drive. Step 4.
 
 Run an IDE, then open a project on the drive **Z:**.

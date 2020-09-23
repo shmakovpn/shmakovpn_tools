@@ -102,7 +102,7 @@ Edit the *__init__.py* file of the created application
 
 .. note:: A *tests.py* file is created inside a **Django** application by default. But as the application grows, this file becomes too large. So, we will not use it, we are going to split tests to several packages and files.
 
-.. figure:: /_static/django_examples/logging_example/python-tests-structure.svg
+.. figure:: ../images/django_examples/logging_example/python-tests-structure.svg
  :alt: python tests structure
 
  **Django** (**python**) tests structure
