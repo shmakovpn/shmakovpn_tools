@@ -17,7 +17,6 @@ Welcome to shmakovpn_tools's documentation!
    centos_ad_integration
    centos7_apache_sso
    certbot
-   datadriven/datadriven_contents
    nodejs/nodejs_contents
    sphinx/sphinx_contents
    django/django_contents
