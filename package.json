@@ -1,0 +1,22 @@
+{
+  "name": "shmakovpn_tools",
+  "version": "1.0.0",
+  "description": "first shmakovpn's nodejs project",
+  "main": "shmakovpn/nodejs_examples/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shmakovpn/shmakovpn_tools.git"
+  },
+  "author": "shmakovpn <shmakovpn@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shmakovpn/shmakovpn_tools/issues"
+  },
+  "homepage": "https://github.com/shmakovpn/shmakovpn_tools#readme"
+}

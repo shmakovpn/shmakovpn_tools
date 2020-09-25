@@ -43,7 +43,7 @@ Create **auto_makedoc.sh** in your project folder.
 .. code-block:: shell-session
 
  $ touch ~/projects/shmakovpn_tools/auto_makedoc.sh
- $ chmod +x !/projects/shmakovpn_tools/auto_makedoc.sh
+ $ chmod +x ~/projects/shmakovpn_tools/auto_makedoc.sh
 
 .. literalinclude:: ../../../auto_makedoc.sh
  :language: bash

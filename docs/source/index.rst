@@ -14,6 +14,7 @@ Welcome to shmakovpn_tools's documentation!
 
    code
    start_python_project
+   shell_ide/shell_ide_contents
    centos_ad_integration
    centos7_apache_sso
    certbot
