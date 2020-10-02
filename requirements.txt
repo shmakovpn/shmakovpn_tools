@@ -10,7 +10,6 @@ whatprovides
 twine
 codecov
 pytest-cov
-
 setuptools
 Django
 nodeenv

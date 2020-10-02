@@ -18,5 +18,7 @@
   "bugs": {
     "url": "https://github.com/shmakovpn/shmakovpn_tools/issues"
   },
-  "homepage": "https://github.com/shmakovpn/shmakovpn_tools#readme"
+  "homepage": "https://github.com/shmakovpn/shmakovpn_tools#readme",
+  "dependencies": {
+  }
 }

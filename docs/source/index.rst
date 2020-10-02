@@ -12,7 +12,7 @@ Welcome to shmakovpn_tools's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   code
+   code/code_contents
    start_python_project
    shell_ide/shell_ide_contents
    centos_ad_integration

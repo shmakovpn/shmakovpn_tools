@@ -22,9 +22,6 @@ VERSION: str = ''
 with open(os.path.join(PACKAGE_DIR, 'version.py')) as version_file:
     exec(version_file.read())
 
-
-
-
 # -- Project information -----------------------------------------------------
 
 project = 'shmakovpn_tools'
@@ -93,3 +90,4 @@ intersphinx_mapping = {'https://docs.python.org/3/': None}
 todo_include_todos = True
 
 master_doc = 'contents'
+
