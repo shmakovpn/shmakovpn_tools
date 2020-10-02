@@ -1,3 +1,5 @@
+.. _centos_ad_integration:
+
 Using **realmd** to connect to an Active Directory Domain
 =========================================================
 
