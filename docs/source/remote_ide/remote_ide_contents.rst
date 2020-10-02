@@ -191,7 +191,7 @@ Edit the config file of **samba**.
 
      # audit
      vfs objects = full_audit acl_xattr
-     full_audit:prefix = %S|%I|%m
+     full_audit:prefix = %S|%I|%m|%u
      full_audit:failure = connect disconnect opendir mkdir rmdir closedir open close read pread write pwrite sendfile rename unlink chmod fchmod chown fchown chdir ftruncate lock symlink readlink link mknod realpath
      full_audit:success = connect disconnect opendir mkdir rmdir closedir open close read pread write pwrite sendfile rename unlink chmod fchmod chown fchown chdir ftruncate lock symlink readlink link mknod realpath
      full_audit:facility = local5
