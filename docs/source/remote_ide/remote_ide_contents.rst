@@ -289,6 +289,37 @@ Configure **samba** logs rotation.
      notifempty
  }
 
+Configure **firewalld**.
+
+.. code-block:: shell-session
+
+ $ sudo firewall-cmd --zone=public --add-service=samba --permanent
+ $ sudo firewall-cmd --reload
+
+Configure **SELinux**.
+
+ Take a look at the path to the samba share folder, it is the path to a web server content.
+
+ .. code-block:: shell-session
+
+  $ sudo ls -alZ /var/www
+  drwxr-xr-x.  5 root root system_u:object_r:httpd_sys_content_t:s0       62 июн  8 23:16 .
+  drwxr-xr-x. 23 root root system_u:object_r:var_t:s0                   4096 окт  2 13:47 ..
+  drwxr-xr-x.  2 root root system_u:object_r:httpd_sys_script_exec_t:s0    6 июн  8 23:16 cgi-bin
+  drwxr-xr-x.  2 root root system_u:object_r:httpd_sys_content_t:s0        6 июн  8 23:16 html
+  ...
+
+ The web server needs that the */var/www* folder and all of its content must have a right **SELinux** context.
+ Something like **httpd_sys_content_t** and etc.
+ But **Samba** has its own **SELinux** context,
+ named **samba_share_t**, and a file or a folder can have only one context.
+ To solve this conflict let's stay the webserver's contexts and allow **Samba** to read/write anywhere.
+
+ .. code-block:: shell-session
+
+  $ sudo setsebool -P samba_export_all_rw 1
+
+
 Samba AD integration (Centos 8)
 -------------------------------
 
@@ -354,7 +385,25 @@ Restart samba
 
  $ sudo systemctl restart smb
 
-.. warning:: You have to configure, or disable **firewalld**
+Configure **SELinux**.
 
-.. warning:: You have to configure, or disable **SELinux**
+ In Centos 8 **dac_override** must be allowed for **Samba**. There is no direct way of how to do this.
+ We need to create the **SELinux** module and install it.
+
+ .. code-block:: shell-session
+
+  $ sudo semodule -DB  # disable suppressing the AVC log
+  $ sudo logrotate -v -f -l /var/log/audit/audit.log  # rotate AVC log
+  $ # Connect to share and try to create a new file
+  $ sudo ausearch -t avc -ts recent  # looking for AVC denied dac_override for smbd
+  ...
+  ----
+  time->Sun Oct 11 13:07:12 2020
+  type=AVC msg=audit(1602410832.702:720): avc:  denied  { dac_override } for  pid=260711 comm="smbd" capability=1  scontext=system_u:system_r:smbd_t:s0 tcontext=system_u:system_r:smbd_t:s0 tclass=capability permissive=0
+  ----
+  ...
+  $ # generate the SELinux module
+  $ echo "type=AVC msg=audit(1602410832.702:720): avc:  denied  { dac_override } for  pid=260711 comm="smbd" capability=1  scontext=system_u:system_r:smbd_t:s0 tcontext=system_u:system_r:smbd_t:s0 tclass=capability permissive=0" | audit2allow -M se_smbd_allow_dac_override_policyllow_dac_override_po
+  $ sudo semodule -i se_smbd_allow_dac_override_policy.pp  # install created module
+  $ sudo semodule -B  # enable suppressing the AVC log
 
