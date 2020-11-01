@@ -20,5 +20,11 @@
   },
   "homepage": "https://github.com/shmakovpn/shmakovpn_tools#readme",
   "dependencies": {
+    "casperjs": "^1.1.4",
+    "class-transformer": "^0.3.1",
+    "class-validator": "^0.12.2",
+    "es6-shim": "^0.35.5",
+    "phantomjs-prebuilt": "^2.1.16",
+    "reflect-metadata": "^0.1.13"
   }
 }

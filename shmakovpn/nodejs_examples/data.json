@@ -1,0 +1,8 @@
+{sdfa
+  "succes": true,
+  "items": [
+    {"name": "Bogotol", "population": 20000},
+    {"name": "Achinsk", "population": 100000},
+    {"name": "Krasnoyarsk", "popolation": 1079000}
+  ]
+}
