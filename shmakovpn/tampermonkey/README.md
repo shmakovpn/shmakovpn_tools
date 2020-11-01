@@ -16,7 +16,7 @@ Script Configuration, change **@match** to your **URL**
  // @namespace    http://localhost/
  // @version      0.2
  // @description  Collects event listeners to window.EventListeners, makes possibility to wrap event handlers (callbacks) into proxy
- // @author       You
+ // @author       shmakovpn
  // @match        http://localhost*/*
  // @grant        none
  // @run-at       document-start
