@@ -8,10 +8,9 @@ This script collects *event listeners* to **window.EventListeners** and
 makes possibility to wrap event handlers (callbacks) into **Proxy**.
 
 
-Configuration:
+Script Configuration, change **@match** to your **URL**
 
-.. code-block: javascript
-
+```javascript
  // ==UserScript==
  // @name         EventListenersProxy
  // @namespace    http://localhost/
@@ -22,9 +21,11 @@ Configuration:
  // @grant        none
  // @run-at       document-start
  // ==/UserScript==
+```
 
-.. code-block: javascript
+Logging and Proxy configurations:
 
+```javascript
  const config = {
      loggingGreatind: false, // logging greating or not
      loggingEnding: false, // logging ending or not
@@ -42,4 +43,5 @@ Configuration:
          }
      }
  }
+```
 
