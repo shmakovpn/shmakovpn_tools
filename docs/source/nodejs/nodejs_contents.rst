@@ -116,6 +116,15 @@ Activate **virtualenv**.
 
 Install **typescript**.
 
+.. note:: 
+
+ If you use Ubuntu and work behind proxy, you may need to set **NODE_EXTRA_CA_CERTS** environment variable to fix
+ *UNABLE_TO_GET_ISSUER_CERT_LOCALLY* error of **npm**.
+ 
+  .. code-block:: bash
+  
+   export NODE_EXTRA_CA_CERTS="/etc/ssl/certs/ca-certificates.crt"
+
 .. code-block:: shell-session
 
  $ npm install -g typescript
