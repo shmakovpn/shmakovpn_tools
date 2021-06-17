@@ -3,12 +3,49 @@
 
 # IDEs
 .idea/
+cache/
+CACHE/
+gunicorn_start
+.vs/
+
+# IDE - VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# ng new (Angular scaffolding)
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.sublime-workplace
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+# /typings
+/tmp
+/out-tsc
+/bazel-out
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+.DS_Store
+Thumbs.db
+
 
 # python
 *.pyc
 __pychache__/
 *.egg-info/
 .eggs/
+.Python
 
 # Django
 migrations/
@@ -23,7 +60,7 @@ venv/
 docs/build/html/
 docs/build/doctrees/
 _build/
-_static/
+# _static/
 _templates/
 
 # codecov
@@ -39,24 +76,49 @@ _templates/
 .pytest_cache/
 
 # build
+env/
 build/
 dist/
+sdist/
+
+# C extensions
+*.so
 
 # secret files
 secret/
 
 # todo
 todo/
-
+temp.py
+temp.html
+temp.txt
+temp.csv
+notes
 shmakovpn/nodejs_examples/dist
 
 # nodejs
 node_modules/
 package-lock.json
-
-
 /__base64encode.csv
 
 
 # mypy
 .mypy_cache
+
+
+# Linux packages
+*.deb
+*.rpm
+
+# some logs
+debug.log
+geckodriver.log
+
+# selenium
+chromedriver.exe
+chromedriver
+geckodriver
+geckodriver.exe
+
+# cloud clients
+.insyncdl
