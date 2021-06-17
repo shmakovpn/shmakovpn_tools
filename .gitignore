@@ -52,6 +52,11 @@ shmakovpn/nodejs_examples/dist
 
 # nodejs
 node_modules/
+package-lock.json
 
 
 /__base64encode.csv
+
+
+# mypy
+.mypy_cache
